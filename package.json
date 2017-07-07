@@ -1,0 +1,49 @@
+{
+    "name": "cloudcms-menu",
+    "version": "0.0.1",
+    "description": "Package that helps displaying menus managed in Cloud CMS",
+    "main": "lib/library.js",
+    "nyc": {
+        "sourceMap": false,
+        "instrument": false
+    },
+    "scripts": {
+        "build": "webpack --env build",
+        "dev": "webpack --progress --colors --watch --env dev",
+        "test": "NODE_ENV=test nyc --reporter=lcov --reporter=text mocha --compilers js:babel-core/register --colors ./test/*.spec.js",
+        "test:watch": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",
+        "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
+    },
+    "devDependencies": {
+        "babel-cli": "6.24.1",
+        "babel-core": "6.24.1",
+        "babel-eslint": "7.2.3",
+        "babel-loader": "7.0.0",
+        "babel-plugin-add-module-exports": "0.2.1",
+        "babel-plugin-istanbul": "^4.1.4",
+        "babel-preset-es2015": "6.24.1",
+        "chai": "3.5.0",
+        "coveralls": "^2.13.1",
+        "eslint": "3.19.0",
+        "eslint-loader": "1.7.1",
+        "istanbul": "^0.4.5",
+        "mocha": "3.3.0",
+        "nyc": "^11.0.3",
+        "webpack": "2.4.1",
+        "yargs": "7.1.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/idealley/cloudcms-menu.git"
+    },
+    "keywords": [
+        "Menu",
+        "Cloud CMS"
+    ],
+    "author": "Pouyt Samuel",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/idealley/cloudcms-menu/issues"
+    },
+    "homepage": "https://github.com/idealley/cloudcms-menu"
+}
