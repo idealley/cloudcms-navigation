@@ -87,11 +87,11 @@ export default class Menu {
 
   /**
    * Given an array, a property and value removes any
-   * matching elements. Returns a new array. 
-   * @param {Object[]} array 
-   * @param {string} property 
+   * matching elements. Returns a new array.
+   * @param {Object[]} array
+   * @param {string} property
    * @param {*} value
-   * @return {Object[]} 
+   * @return {Object[]}
    */
   remove(array, property, value) {
     return array.filter(e => e[property] !== value);
