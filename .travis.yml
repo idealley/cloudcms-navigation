@@ -4,6 +4,7 @@ node_js:
   - "7"
 before_install:  
   - npm install -g npm
+  - npm install
   - npm run build
 script: npm run test
 after_success: 
