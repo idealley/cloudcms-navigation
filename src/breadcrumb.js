@@ -1,6 +1,6 @@
-export default class Cat {
+export default class Breadcrumb {
   constructor() {
-    this._name = 'Cat';
+    this._name = 'Breadcrumb';
   }
   get name() {
     return this._name;
