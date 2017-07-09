@@ -1,5 +1,5 @@
 {
-    "name": "cloudcms-menu",
+    "name": "cloudcms-navigation",
     "version": "0.0.1",
     "description": "Package that helps displaying menus managed in Cloud CMS",
     "main": "lib/library.js",
@@ -38,6 +38,9 @@
     },
     "keywords": [
         "Menu",
+        "Breadcrumb",
+        "Pathway",
+        "Navigation",
         "Cloud CMS"
     ],
     "author": "Pouyt Samuel",
