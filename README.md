@@ -5,10 +5,19 @@ Small library to manage menus and breadcrumbs with Cloud CMS
 For now this code is extracted from the [this tutorial](https://idealley.gitbooks.io/cloud-cms-how-to-manage-menus/content/) that explains the concepts behind this code and gives an example setup.
 
 ## Usage
+### Installation
 Install the library
 
 `$ npm i --save cloudcms-navigation`
 
+### Compile from source
+
+1. `$ git clone https://github.com/idealley/cloudcms-navigation.git <optional-folder-name>`
+2. `$ npm install`
+3. `$ npm run build`
+4. optional run tests: `$ npm test` this will display a code coverage report  
+
+### Code
 In your code:
 
 ```javascript
@@ -91,5 +100,11 @@ Loop through the returned array:
 
 ## Contributions
 Contributions are welcome, submit pull requests.
+
+In order to get started developping:
+
+1. 3 first steps from "Build from source"
+2. launch a CLI and run `$ npm run dev` this will run webpack in "watch mode" and recompile lint your code as you save.
+3. launch another CLI and run `$ npm run test:watch` this will run the test suite as soon as you save anything.
 
 
