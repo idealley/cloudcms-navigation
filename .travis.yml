@@ -4,9 +4,12 @@ node_js:
   - "7"
 before_install:  
   - npm install -g npm
-  - npm install
+script: 
   - npm run dev-travis
-script: npm run test
+  - npm run test
+cache:
+  directories:
+    - "node_modules"
 after_success: 
   - npm run coveralls
 notifications:

@@ -18,7 +18,7 @@ describe('Given a flat list of object items', () => {
 
   before(() => {
     const menu = new Menu();
-    tree = menu.childrenToTree(items.items, item._doc);
+    tree = menu.childrenToTree(items.items, item.menu._doc);
   });
 
   it('creates a tree if a parent exists', () => {
@@ -42,7 +42,7 @@ describe('Given a flat list of object items', () => {
 describe('Given a tree object', () => {
   before(()=>{
     const menu = new Menu();
-    parsed = menu.parse(items.tree);
+    parsed = menu.parse(items.menuTree);
   });
 
   it('adds a path property', () => {
@@ -70,7 +70,7 @@ describe('Given an unsorted array of items', () =>{
     expect(r).to.be.an('array');
     expect(r[0]).to.have.property('title')
       .to.equal('A title');
-    expect(r[2]).to.have.property('title')
+    expect(r[3]).to.have.property('title')
       .to.equal('C title');
   });
 
@@ -87,13 +87,22 @@ describe('Given an unsorted array of items', () =>{
     const r = menu.sortBy(unsorted.items, 'order');
     expect(r).to.be.an('array')
     expect(r[0]).to.have.property('order')
-      .to.equal(1);
-    expect(r[2]).to.have.property('order')
+      .to.equal(0);
+    expect(r[3]).to.have.property('order')
       .to.equal(3);
   });
 
   it('sorts items by the reverse given order', () => {
     const r = menu.sortBy(unsorted.items, 'reverse order');
+    expect(r).to.be.an('array')
+    expect(r[0]).to.have.property('order')
+      .to.equal(3);
+    expect(r[2]).to.have.property('order')
+      .to.equal(1);
+  });
+
+  it('it does not sort', () => {
+    const r = menu.sortBy(unsorted.items);
     expect(r).to.be.an('array')
     expect(r[0]).to.have.property('order')
       .to.equal(3);

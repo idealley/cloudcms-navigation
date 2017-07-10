@@ -11,6 +11,10 @@ export default {
         {
            title: "A title",
            order: 1
+        },
+        {
+           title: "A title",
+           order: 0
         }
     ]
 };
