@@ -327,6 +327,6 @@ export default {
             title: 'Child of child 1',
             slug: 'child-of-child-1',
             targetSlug: 'article-1' 
-        } 
+        }
     ]
 }

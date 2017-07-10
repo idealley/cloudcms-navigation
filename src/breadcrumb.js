@@ -28,10 +28,10 @@ export default class Breadcrumb {
    * returns reduced objects with needed slugs and title.
    * targetSlug is the slug of the navigation target.
    * @param {Object[]} path
-   * @todo Issue #1
    */
   parse(path) {
-    return path.reduce((a, i) => {
+
+    return path.reduce((a, i, k) => {
       const {title, slug} = i;
       let targetSlug = '';
 
@@ -43,7 +43,6 @@ export default class Breadcrumb {
 
       if (i.path && !i._stats['a:category-association_INCOMING']) {
         a = a.concat(this.parse(i.path));
-        i.path = [];
       }
       return a;
     }, []).reverse();
