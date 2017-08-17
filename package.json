@@ -1,6 +1,6 @@
 {
     "name": "cloudcms-navigation",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Package that helps displaying menus managed in Cloud CMS",
     "main": "lib/library.js",
     "nyc": {
@@ -35,10 +35,10 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/idealley/cloudcms-menu.git"
+        "url": "https://github.com/idealley/cloudcms-navigation.git"
     },
     "keywords": [
-        "Menu",
+        "navigation",
         "Breadcrumb",
         "Pathway",
         "Navigation",
@@ -47,7 +47,7 @@
     "author": "Pouyt Samuel",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/idealley/cloudcms-menu/issues"
+        "url": "https://github.com/idealley/cloudcms-navigation/issues"
     },
-    "homepage": "https://github.com/idealley/cloudcms-menu"
+    "homepage": "https://github.com/idealley/cloudcms-navigation"
 }
